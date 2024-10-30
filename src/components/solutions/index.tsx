@@ -15,7 +15,7 @@ export function Solutions({ imageSrc, title, logoSrc, isSpecial }: SolutionItemP
 
         <div className='solutions-logo-container'>
           <img src={logoSrc} alt="Logo" />
-          <h3 className={isSpecial ? 'special-title' : ''}>{title}</h3>
+          <p className={isSpecial ? 'special-title' : ''}>{title}</p>
         </div>
       </div>
     </div>

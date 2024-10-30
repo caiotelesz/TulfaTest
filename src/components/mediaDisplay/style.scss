@@ -1,0 +1,86 @@
+.media-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .media-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+    h2 {
+      color: #736DFA;
+      font-size: 12px;
+      font-family: "SfPro-SemiBold";
+      line-height: 15px;
+    }
+
+    h3 {
+      color: #FFFFFF;
+      font-size: 24px;
+      font-family: "SfPro-SemiBold";
+      line-height: 32px;
+    }
+
+    p {
+      color: #FFFFFF;
+      font-size: 16px;
+      font-family: "SfPro-Light";
+      line-height: 23px;
+      width: 480px;
+      letter-spacing: 0.035em;
+    }
+
+    a {
+      text-align: center;
+      text-decoration: none;
+      font-family: "SfPro-Regular";
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      background-color: var(--primary-colorC);
+      padding: 10px 0px;
+      border-radius: 10px;
+      width: 180px;
+    }
+
+  }
+  
+
+  .media-content {
+
+    .media-video {
+      position: relative;
+
+      button {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%);
+        z-index: 99;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+
+        display: none;
+
+        width: 100px;
+        height: 100px;
+        justify-content: center;
+        align-items: center;
+        color: rgba(0, 0, 0, 0.431);
+
+      }
+
+      &:hover button {
+        display: flex;
+      }
+
+      > video {
+        width: 500px;
+        height: 280px;
+        border-radius: 10px;
+      }
+    }
+  }
+}

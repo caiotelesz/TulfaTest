@@ -1,5 +1,6 @@
 import './style.scss';
 import { Solutions }  from '../components/solutions';
+import { MediaDisplay } from '../components/mediaDisplay';
 
 function App() {
 
@@ -56,6 +57,15 @@ function App() {
             imageSrc='/assets/images/omnichannel-image.jpg'
             title='Omnichannel Commerce'
             logoSrc='/assets/images/omnichannel-logo.png'
+          />
+        </div>
+      </section>
+
+      <section className='media-section'>
+        <div className="container">
+          <MediaDisplay
+            mediaSrc='/assets/videos/inStore-video.mp4'
+            mediaType='video'
           />
         </div>
       </section>
