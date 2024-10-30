@@ -1,0 +1,42 @@
+// Colors
+:root {
+  // Primary
+  --primary-colorA: #6358E7;
+  --primary-colorB: #151568;
+  --primary-colorC: #FF4729;
+
+  // Secondary
+  --secondary-colorA: #5B5B95;
+  --secondary-colorB: #F2F2F2;
+  --secondary-colorC: #C7C4E3;
+  --secondary-colorD: #FF6F57;
+
+  // Gradients
+  
+}
+
+// Fonts
+@font-face {
+  font-family: "SfPro-Bold";
+  src: url(../assets/fonts/SF-Pro-Display-Bold.otf);
+}
+
+@font-face {
+  font-family: "SfPro-SemiBold";
+  src: url(../assets/fonts/SF-Pro-Display-Semibold.otf);
+}
+
+@font-face {
+  font-family: "SfPro-Medium";
+  src: url(../assets/fonts/SF-Pro-Display-Medium.otf);
+}
+
+@font-face {
+  font-family: "SfPro-Regular";
+  src: url(../assets/fonts/SF-Pro-Display-Regular.otf);
+}
+
+@font-face {
+  font-family: "SfPro-Light";
+  src: url(../assets/fonts/SF-Pro-Display-Light.otf);
+}
