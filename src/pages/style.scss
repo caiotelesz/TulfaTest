@@ -31,3 +31,46 @@
     }
   }
 }
+
+.solutions-section {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 0px;
+
+  .solutions-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      font-family: "SfPro-SemiBold";
+      font-size: 40px;
+      line-height: 50px;
+
+      background: linear-gradient(-90deg, #5345FF, #FF3B1B);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+    }
+
+    h3 {
+      font-family: "SfPro-SemiBold";
+      font-size: 20px;
+      color: #312C8D;
+      line-height: 30px;
+    }
+  }
+
+  .solutions-images-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 120px;
+    justify-content: center;
+    padding: 80px 0px;
+  }
+}
