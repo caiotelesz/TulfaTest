@@ -1,8 +1,32 @@
 import './style.scss';
 import { Solutions }  from '../components/solutions';
 import { MediaDisplay } from '../components/mediaDisplay';
+import { useState } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 function App() {
+  const logos = [
+    '/assets/images/garmin-image.png',
+    '/assets/images/stanley-image.png',
+    '/assets/images/siemens-image.png',
+    '/assets/images/wells-image.png',
+    '/assets/images/delphi-image.png',
+    '/assets/images/under-image.png',
+    '/assets/images/americanEagle-image.png',
+    '/assets/images/bosch-image.png',
+    '/assets/images/lowe-image.png',
+    '/assets/images/reckitt-image.png'
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? logos.length - 8 : prevIndex - 1));
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === logos.length - 8 ? 0 : prevIndex + 1));
+  };
 
   return (
     <div>
@@ -98,6 +122,23 @@ function App() {
             mediaSrc='/assets/videos/enhanced-video.mp4'
             mediaType='video'
           />
+        </div>
+      </section>
+
+      <section className="fortune-section">
+        <div className="fortune-container">
+          <h2>Trusted by top Fortune 500 clients from around the world</h2>
+          <div className="carousel">
+            <button className="carousel-button left" onClick={handlePrev}><ChevronLeft size={40} /></button>
+            <div className="carousel-images">
+              {logos.slice(currentIndex, currentIndex + 8).map((logo, index) => (
+                <img key={index} src={logo} alt={`Logo ${index}`} />
+              ))}
+            </div>
+            <button className="carousel-button right" onClick={handleNext}><ChevronRight size={40} /></button>
+          </div>
+          
+          <button className="who-we-work-with">WHO WE WORK WITH</button>
         </div>
       </section>
     </div>

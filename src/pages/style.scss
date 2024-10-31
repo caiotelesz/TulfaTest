@@ -97,5 +97,69 @@
       flex-direction: row-reverse;
     }
   }
+}
 
+.fortune-section {
+  background-color: #151568;
+  padding: 140px 0px;
+  
+  .fortune-container {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    width: 1600px;
+
+    h2 {
+      font-family: "SfPro-Regular";
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 44px;
+      letter-spacing: 0.03em;
+      color: #FFFFFF;
+      margin-bottom: 50px;
+    }
+
+    .carousel {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      gap: 40px;
+
+      .carousel-images {
+        display: flex;
+        gap: 40px;
+        overflow: hidden;
+
+        img {
+          width: 100px;
+          height: 100px;
+          object-fit: contain;
+          border-radius: 13px;
+        }
+      }
+
+      .carousel-button {
+        background-color: transparent;
+        color: #fff;
+        width: 40px;
+        height: 40px;
+        border: none;
+        cursor: pointer;
+        padding: 0 15px;
+      }
+    }
+
+    .who-we-work-with {
+      background-color: #736DF9;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      margin-top: 60px;
+      font-family: "SfPro-Regular";
+    }
+  }
 }

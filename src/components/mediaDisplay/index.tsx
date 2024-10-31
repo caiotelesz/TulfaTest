@@ -69,9 +69,7 @@ export function MediaDisplay({ title, subtitle, description, buttonText, mediaSr
               </button>
             )}
             <video src={mediaSrc} ref={videoRef} width="500" height="280">
-              <source src="/assets/videos/product-video.mp4" type="video/mp4" />
               <track
-                src="/assets/videos/product-video.mp4"
                 kind="subtitles"
                 srcLang="en"
                 label="English"
