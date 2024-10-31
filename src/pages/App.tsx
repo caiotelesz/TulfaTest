@@ -64,7 +64,38 @@ function App() {
       <section className='media-section'>
         <div className="container">
           <MediaDisplay
+            title='Metaverse Content Production'
+            subtitle='InStore Immersive Activation'
+            description='Tulfa’s AR feature was tailor-made to suit both the venue and the audience. With the easy-to-operate touchscreen scan interface, we brought live-action bees to Kate Spade customers!'
+            buttonText='LEARN MORE ABOUT ar'
             mediaSrc='/assets/videos/inStore-video.mp4'
+            mediaType='video'
+          />
+
+          <MediaDisplay
+            title='3D Model Creation'
+            subtitle='InStore Immersive Activation'
+            description='The future of digital experiences is here. Tulfa’s 3D Lab provides you with an instant metaverse strategy by creating 3D models and other assets to help you sell your products faster. We create and deploy 3D models that work across platforms.' 
+            buttonText='3d assets creation'
+            mediaSrc='/assets/videos/product-video.mp4'
+            mediaType='video'
+          />
+
+          <MediaDisplay
+            title='3D Model Creation'
+            subtitle='3D Product Configuration'
+            description='It enables for product customization in terms of colors, materials, textures, sizes, pricing, and other factors. 3D Product Configuration generates stunning real-time 3D product visualizations.' 
+            buttonText='3D Product Configuration'
+            mediaSrc='/assets/images/3dProduct-image.png'
+            mediaType='image'
+          />
+
+          <MediaDisplay
+            title='Product Content'
+            subtitle='Enhanced Content that Converts'
+            description='We enhance your product listings and create digital experiences that transform your digital shelf. Check out our new video for a quick highlight of how we can help your eCommerce business succeed!' 
+            buttonText='learn more about product content'
+            mediaSrc='/assets/videos/enhanced-video.mp4'
             mediaType='video'
           />
         </div>

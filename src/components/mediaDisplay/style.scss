@@ -1,8 +1,5 @@
 .media-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-
+  
   .media-info {
     display: flex;
     flex-direction: column;
@@ -45,7 +42,6 @@
     }
 
   }
-  
 
   .media-content {
 

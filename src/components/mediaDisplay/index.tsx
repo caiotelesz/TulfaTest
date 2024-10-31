@@ -1,21 +1,22 @@
 import { useRef, useState } from 'react';
-import './style.scss';
 import { Pause, Play } from 'lucide-react';
+import './style.scss';
 
 interface MediaDisplayProps {
   title: string;
   subtitle: string;
   description: string;
-  linkText: string;
+  buttonText: string;
   mediaSrc: string;
   mediaType: 'image' | 'video';
 }
 
-export function MediaDisplay({ mediaSrc, mediaType }: MediaDisplayProps) {
+export function MediaDisplay({ title, subtitle, description, buttonText, mediaSrc, mediaType }: MediaDisplayProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [play, setPlay] = useState(false);
   const [showButton, setShowButton] = useState(true);
 
+  // Toggle video play/pause and button visibility
   function handlePlayVideo() {
     if (!videoRef.current) return;
     if (videoRef.current.paused) {
@@ -29,12 +30,14 @@ export function MediaDisplay({ mediaSrc, mediaType }: MediaDisplayProps) {
     }
   }
 
+  // When the mouse is over the video, the pause button will apear
   function handleMouseEnter() {
     if (play) {
       setShowButton(true);
     }
   }
 
+  // button when the mouse leaves the video area
   function handleMouseLeave() {
     if (play) {
       setShowButton(false);
@@ -44,11 +47,11 @@ export function MediaDisplay({ mediaSrc, mediaType }: MediaDisplayProps) {
   return (
     <div className="media-container">
       <div className="media-info">
-        <h2>Metaverse Content Production</h2>
-        <h3>InStore Immersive Activation</h3>
-        <p>Tulfa’s AR feature was tailor-made to suit both the venue and the audience. With the easy-to-operate touchscreen scan interface, we brought live-action bees to Kate Spade customers!</p>
+        <h2>{title}</h2>
+        <h3>{subtitle}</h3>
+        <p>{description}</p>
 
-        <a href="#">Learn more about ar</a>
+        <a href="#">{buttonText}</a>
       </div>
 
       <div className="media-content">
