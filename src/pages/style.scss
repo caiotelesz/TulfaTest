@@ -1,3 +1,51 @@
+.video-section {
+  position: relative;
+  width: 100%;
+  height: 786px;
+
+  > video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .video-container {
+    position: absolute;
+    z-index: 1;
+    bottom: 90px;
+    left: 60px;
+
+    > h1 {
+      background: linear-gradient(90deg, rgba(169, 164, 243, 1), rgba(251, 251, 248, 1));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      width: 430px;
+      font-size: 44px;
+      font-family: "SfPro-Light";
+      margin-left: 40px;
+    }
+  }
+}
+
+.shop-section {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1300px;
+  padding: 75px 0px;
+
+  h2 {
+    font-family: "SfPro-Light";
+    font-size: 28px; 
+    line-height: 36px;
+    color:#302C8C;
+    margin: 0 auto;
+    max-width: 730px;
+  }
+}
+
 .section2 {
   background-color: #302C8C;
   display: flex;

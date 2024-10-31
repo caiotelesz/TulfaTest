@@ -30,6 +30,18 @@ function App() {
 
   return (
     <div>
+      <section className='video-section'>
+        <video autoPlay muted src="/assets/videos/video-page.mp4" />  
+
+        <div className='video-container'>
+          <h1>Create unrivalled shopping experiences for your consumers</h1>
+        </div>
+      </section>
+
+      <section className='shop-section'>
+        <h2>The way businesses and consumers shop has radically changed. Discover how top brands across multiple industries deliver an excellent digital-first customer experience with Tulfa.</h2>
+      </section>
+
       <section className='section2'>
         <h2>Tulfa AR creates immersive and engaging eCommerce experiences</h2>
 
