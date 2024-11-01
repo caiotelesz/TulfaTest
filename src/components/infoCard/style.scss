@@ -27,3 +27,33 @@
     width: 365px;
   }
 }
+
+@media (max-width: 1208px) {
+  .info-card-container {
+    width: 100%;
+    max-width: 260px;
+
+    img {
+      width: 100%;
+      max-width: 259.74px;
+      height: 100%;
+      max-height: 177.9px;
+      border: 10.67px;
+    }
+
+    h3 {
+      font-size: 12.81px;
+      width: 100%;
+      max-width: 259.74px;
+      line-height: 16.37px;
+
+    }
+
+    p {
+      font-size: 12px;
+      width: 100%;
+      max-width: 259.74px;
+      line-height: 16px;
+    }
+  }
+}
