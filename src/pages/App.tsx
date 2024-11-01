@@ -27,6 +27,112 @@ export default function App() {
     });
   };
 
+  // Data for Solutions section
+  const solutionsData = [
+    {
+      imageSrc: '/assets/images/metaverse-image.jpg',
+      title: 'Metaverse Content Production',
+      logoSrc: '/assets/images/metaverse-logo.png'
+    },
+    {
+      imageSrc: '/assets/images/enhanced-image.jpg',
+      title: 'Enhanced Brand Content',
+      logoSrc: '/assets/images/enhanced-logo.png'
+    },
+    {
+      imageSrc: '/assets/images/catalog-image.jpg',
+      title: 'Catalog Management',
+      logoSrc: '/assets/images/catalog-logo.png'
+    },
+    {
+      imageSrc: '/assets/images/product-image.jpg',
+      title: 'Product Imagery',
+      logoSrc: '/assets/images/product-logo.png'
+    },
+    {
+      imageSrc: '/assets/images/ar-image.jpg',
+      title: 'AR Viewer',
+      logoSrc: '/assets/images/ar-logo.png',
+      isSpecial: true
+    },
+    {
+      imageSrc: '/assets/images/omnichannel-image.jpg',
+      title: 'Omnichannel Commerce',
+      logoSrc: '/assets/images/omnichannel-logo.png'
+    }
+  ];
+
+  // Data for MediaDisplay section
+  const mediaData = [
+    {
+      title: 'Metaverse Content Production',
+      subtitle: 'InStore Immersive Activation',
+      description: 'Tulfa’s AR feature was tailor-made to suit both the venue and the audience. With the easy-to-operate touchscreen scan interface, we brought live-action bees to Kate Spade customers!',
+      buttonText: 'LEARN MORE ABOUT ar',
+      mediaSrc: '/assets/videos/inStore-video.mp4',
+      mediaType: 'video'
+    },
+    {
+      title: '3D Model Creation',
+      subtitle: 'InStore Immersive Activation',
+      description: 'The future of digital experiences is here. Tulfa’s 3D Lab provides you with an instant metaverse strategy by creating 3D models and other assets to help you sell your products faster. We create and deploy 3D models that work across platforms.',
+      buttonText: '3d assets creation',
+      mediaSrc: '/assets/videos/product-video.mp4',
+      mediaType: 'video'
+    },
+    {
+      title: '3D Model Creation',
+      subtitle: '3D Product Configuration',
+      description: 'It enables for product customization in terms of colors, materials, textures, sizes, pricing, and other factors. 3D Product Configuration generates stunning real-time 3D product visualizations.',
+      buttonText: '3D Product Configuration',
+      mediaSrc: '/assets/images/3dProduct-image.png',
+      mediaType: 'image'
+    },
+    {
+      title: 'Product Content',
+      subtitle: 'Enhanced Content that Converts',
+      description: 'We enhance your product listings and create digital experiences that transform your digital shelf. Check out our new video for a quick highlight of how we can help your eCommerce business succeed!',
+      buttonText: 'learn more about product content',
+      mediaSrc: '/assets/videos/enhanced-video.mp4',
+      mediaType: 'video'
+    }
+  ];
+
+  // Data for InfoCard section
+  const infoCardsData = [
+    {
+      title: 'Baby Crib - 3D Modeling / Augmented Reality',
+      description: 'The potential of augmented reality is limitless. With augmented reality, give your shoppers the opportunity to feel and experience your products in their space.',
+      image: '/assets/images/info/baby-image.png'
+    },
+    {
+      title: 'Kate Spade New York & Tulfa Inc | AR/VR | InStore Immersive Activation',
+      description: 'This Summer, Tulfa and Kate Spade New York worked together to create an immersive, engaging experience for their Rockefeller Centre store in New York.',
+      image: '/assets/images/info/kate-image.png'
+    },
+    {
+      title: 'HARLEY DAVIDSON HELMET - Timelapse Showreel by Tulfa Inc.',
+      description: 'Our skilled 3D artists need only a few reference images to create high-quality product renders.',
+      image: '/assets/images/info/harley-image.png'
+    },
+    {
+      title: 'NIKE - AR Ready 3D Model by Tulfa Inc',
+      description: 'Augmented reality provides sellers the ability to set their products apart from the competition by offering consumers new shopping experiences.',
+      image: '/assets/images/info/nike-image.png'
+    },
+    {
+      title: 'Hardware Category - CRL Products - 3D Modeling',
+      description: 'Every day, from 6 continents across 20 industry verticals, our staff delivers next generation customer experience and helps companies better connect with their customers.',
+      image: '/assets/images/info/baby-image.png'
+    },
+    {
+      title: 'Chicago Cubs Nike T-Shirt - Product Animation Showreel by Tulfa Inc.',
+      description: 'Our team of 3D artists created this CGI product video to show off not one, not two, but three different shirts representing our hometown baseball team, the Chicago Cubs!',
+      image: '/assets/images/info/baby-image.png'
+    }
+  ];
+
+  // Company logos
   const logos = [
     '/assets/images/garmin-image.png',
     '/assets/images/stanley-image.png',
@@ -124,77 +230,30 @@ export default function App() {
        </div>
 
         <div className='solutions-images-container'>
-          <Solutions
-            imageSrc='/assets/images/metaverse-image.jpg'
-            title='Metaverse Content Production'
-            logoSrc='/assets/images/metaverse-logo.png'
-          />
-          <Solutions
-            imageSrc='/assets/images/enhanced-image.jpg'
-            title='Enhanced Brand Content'
-            logoSrc='/assets/images/enhanced-logo.png'
-          />
-          <Solutions
-            imageSrc='/assets/images/catalog-image.jpg'
-            title='Catalog Management'
-            logoSrc='/assets/images/catalog-logo.png'
-          />
-          <Solutions
-            imageSrc='/assets/images/product-image.jpg'
-            title='Product Imagery'
-            logoSrc='/assets/images/product-logo.png'
-          />
-          <Solutions
-            imageSrc='/assets/images/ar-image.jpg'
-            title='AR Viewer'
-            logoSrc='/assets/images/ar-logo.png'
-            isSpecial={true}
-          />
-          <Solutions
-            imageSrc='/assets/images/omnichannel-image.jpg'
-            title='Omnichannel Commerce'
-            logoSrc='/assets/images/omnichannel-logo.png'
-          />
+          {solutionsData.map((solution, index) => (
+            <Solutions
+              key={index}
+              imageSrc={solution.imageSrc}
+              title={solution.title}
+              logoSrc={solution.logoSrc}
+            />
+          ))}
         </div>
       </section>
 
       <section className='media-section'>
         <div className="container">
-          <MediaDisplay
-            title='Metaverse Content Production'
-            subtitle='InStore Immersive Activation'
-            description='Tulfa’s AR feature was tailor-made to suit both the venue and the audience. With the easy-to-operate touchscreen scan interface, we brought live-action bees to Kate Spade customers!'
-            buttonText='LEARN MORE ABOUT ar'
-            mediaSrc='/assets/videos/inStore-video.mp4'
-            mediaType='video'
-          />
-
-          <MediaDisplay
-            title='3D Model Creation'
-            subtitle='InStore Immersive Activation'
-            description='The future of digital experiences is here. Tulfa’s 3D Lab provides you with an instant metaverse strategy by creating 3D models and other assets to help you sell your products faster. We create and deploy 3D models that work across platforms.' 
-            buttonText='3d assets creation'
-            mediaSrc='/assets/videos/product-video.mp4'
-            mediaType='video'
-          />
-
-          <MediaDisplay
-            title='3D Model Creation'
-            subtitle='3D Product Configuration'
-            description='It enables for product customization in terms of colors, materials, textures, sizes, pricing, and other factors. 3D Product Configuration generates stunning real-time 3D product visualizations.' 
-            buttonText='3D Product Configuration'
-            mediaSrc='/assets/images/3dProduct-image.png'
-            mediaType='image'
-          />
-
-          <MediaDisplay
-            title='Product Content'
-            subtitle='Enhanced Content that Converts'
-            description='We enhance your product listings and create digital experiences that transform your digital shelf. Check out our new video for a quick highlight of how we can help your eCommerce business succeed!' 
-            buttonText='learn more about product content'
-            mediaSrc='/assets/videos/enhanced-video.mp4'
-            mediaType='video'
-          />
+        {mediaData.map((media, index) => (
+            <MediaDisplay
+              key={index}
+              title={media.title}
+              subtitle={media.subtitle}
+              description={media.description}
+              buttonText={media.buttonText}
+              mediaSrc={media.mediaSrc}
+              mediaType={media.mediaType}
+            />
+          ))}
         </div>
       </section>
 
@@ -236,36 +295,14 @@ export default function App() {
           </div>
 
           <div className="info-card">
-            <InfoCard 
-              title='Baby Crib - 3D Modeling / Augmented Reality'
-              description='The potential of augmented reality is limitless. With augmented reality, give your shoppers the opportunity to feel and experience your products in their space.'
-              image='/assets/images/info/baby-image.png'
-            />
-            <InfoCard 
-              title='Kate Spade New York & Tulfa Inc | AR/VR | InStore Immersive Activation'
-              description='This Summer, Tulfa and Kate Spade New York worked together to create an immersive, engaging experience for their Rockefeller Centre store in New York.'
-              image='/assets/images/info/kate-image.png'
-            />
-            <InfoCard 
-              title='HARLEY DAVIDSON HELMET - Timelapse Showreel by Tulfa Inc.'
-              description='Our skilled 3D artists need only a few reference images to create high-quality product renders.'
-              image='/assets/images/info/harley-image.png'
-            />
-            <InfoCard 
-              title='NIKE - AR Ready 3D Model by Tulfa Inc'
-              description='Augmented reality provides sellers the ability to set their products apart from the competition by offering consumers new shopping experiences.'
-              image='/assets/images/info/nike-image.png'
-            />
-            <InfoCard 
-              title='Hardware Category - CRL Products - 3D Modeling'
-              description='Every day, from 6 continents across 20 industry verticals, our staff delivers next generation customer experience and helps companies better connect with their customers.'
-              image='/assets/images/info/baby-image.png'
-            />
-            <InfoCard 
-              title='Chicago Cubs Nike T-Shirt - Product Animation Showreel by Tulfa Inc.'
-              description='Our team of 3D artists created this CGI product video to show off not one, not two, but three different shirts representing our hometown baseball team, the Chicago Cubs!'
-              image='/assets/images/info/baby-image.png'
-            />
+          {infoCardsData.map((infoCard, index) => (
+              <InfoCard 
+                key={index}
+                title={infoCard.title}
+                description={infoCard.description}
+                image={infoCard.image}
+              />
+            ))}
           </div>
 
           <div className="info-btn">
