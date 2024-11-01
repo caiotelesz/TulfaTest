@@ -218,6 +218,10 @@ function App() {
           </div>
         </div>
       </section>
+
+      <section className='contact-section'>
+        <img src="/assets/images/contact-image.png" alt="contact image" />
+      </section>
     </div>
   )
 }
