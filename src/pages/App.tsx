@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { InfoCard } from '../components/infoCard';
 
-function App() {
+export default function App() {
   const logos = [
     '/assets/images/garmin-image.png',
     '/assets/images/stanley-image.png',
@@ -225,5 +225,3 @@ function App() {
     </div>
   )
 }
-
-export default App;

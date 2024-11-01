@@ -68,7 +68,7 @@ export function MediaDisplay({ title, subtitle, description, buttonText, mediaSr
                 {!play ? <Play fill="rgba(0, 0, 0, 0.5)" /> : <Pause fill="rgba(0, 0, 0, 0.5)" />}
               </button>
             )}
-            <video src={mediaSrc} ref={videoRef} width="500" height="280">
+            <video src={mediaSrc} ref={videoRef}>
               <track
                 kind="subtitles"
                 srcLang="en"
