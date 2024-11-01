@@ -19,7 +19,7 @@ I started by reviewing the design in Figma, analyzing each component and animati
 
 ### Technologies Used
 - React.js
-- CSS
+- Sass
 - Figma
 - Lucide React
 - Vercel
