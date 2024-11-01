@@ -4,25 +4,15 @@ import { MediaDisplay } from '../components/mediaDisplay';
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { InfoCard } from '../components/infoCard';
+import { CaseCard } from '../components/caseCard';
 
 export default function App() {
-  const logos = [
-    '/assets/images/garmin-image.png',
-    '/assets/images/stanley-image.png',
-    '/assets/images/siemens-image.png',
-    '/assets/images/wells-image.png',
-    '/assets/images/delphi-image.png',
-    '/assets/images/under-image.png',
-    '/assets/images/americanEagle-image.png',
-    '/assets/images/bosch-image.png',
-    '/assets/images/lowe-image.png',
-    '/assets/images/reckitt-image.png'
-  ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [activeButton, setActiveButton] = useState(null);
   const [hasAdvanced, setHasAdvanced] = useState(false);
 
+  // Carousel for Companies
   function handlePrev() {
     if (hasAdvanced) {
       setCurrentIndex((prevIndex) => (prevIndex === 0 ? logos.length - 8 : prevIndex - 1));
@@ -37,9 +27,67 @@ export default function App() {
     });
   };
 
+  const logos = [
+    '/assets/images/garmin-image.png',
+    '/assets/images/stanley-image.png',
+    '/assets/images/siemens-image.png',
+    '/assets/images/wells-image.png',
+    '/assets/images/delphi-image.png',
+    '/assets/images/under-image.png',
+    '/assets/images/americanEagle-image.png',
+    '/assets/images/bosch-image.png',
+    '/assets/images/lowe-image.png',
+    '/assets/images/reckitt-image.png'
+  ];
+
+  // button for info
   function handleButtonClick(button) {
     setActiveButton(button);
   };
+
+  // Carousel for case studies
+  const [currentCaseIndex, setCurrentCaseIndex] = useState(0);
+
+  function handlePrevCase() {
+    setCurrentCaseIndex((prevIndex) => (prevIndex === 0 ? caseCards.length - 3 : prevIndex - 1));
+  }
+
+  function handleNextCase() {
+    setCurrentCaseIndex((prevIndex) => (prevIndex === caseCards.length - 3 ? 0 : prevIndex + 1));
+  }
+
+  const caseCards = [
+    <CaseCard 
+      imgSrc='/assets/images/caseStudies/diesel-image.png'
+      imgAlt='Diesel image'
+      title='DIESEL - AR Ready 3D Model by Tulfa Inc.'
+    />,
+    <CaseCard 
+      imgSrc='/assets/images/caseStudies/tulfaFood-image.png'
+      imgAlt='Tulfa Food image'
+      title='Tulfa: Food, Beverages & Beauty - 360° Photography Examples'
+    />,
+    <CaseCard 
+      imgSrc='/assets/images/caseStudies/craftsman-image.png'
+      imgAlt='Craftsman image'
+      title='CRAFTSMAN Product Animation 2020 Showreel by Tulfa Inc.'
+    />,
+    <CaseCard 
+      imgSrc='/assets/images/caseStudies/tulfaDemo-image.png'
+      imgAlt='Tulfa Demo image'
+      title='Tulfa Demo Reel: AR/VR - CGI - Product Photography - Ennhance Brand Content - Rapid Item Set-up'
+    />,
+    <CaseCard 
+      imgSrc='/assets/images/caseStudies/kateSpade-image.png'
+      imgAlt='Kate Spade image'
+      title='Kate Spade New York & Tulfa Inc | AR/VR | InStore Immersive Activation'
+    />,
+    <CaseCard 
+      imgSrc='/assets/images/caseStudies/bottega-image.png'
+      imgAlt='bottega image'
+      title='Bottega Veneta Handbag - AR Ready 3D Model by Tulfa Inc.'
+    />,
+  ];
 
   return (
     <div>
@@ -223,6 +271,28 @@ export default function App() {
           <div className="info-btn">
             <button className="load-more">Load More</button>
           </div>
+        </div>
+      </section>
+
+      <section className='caseS-section'>
+        <div className="caseS-title">
+          <h2>Case Studies</h2>
+        </div>
+
+        <div className="case-carousel">
+          <button className="carousel-button left" onClick={handlePrevCase}>
+            <ChevronLeft size={40} />
+          </button>
+          <div className="case-carousel-cards">
+            {caseCards.slice(currentCaseIndex, currentCaseIndex + 3).map((caseCard, index) => (
+              <div key={index} className="case-card-wrapper">
+                {caseCard}
+              </div>
+            ))}
+          </div>
+          <button className="carousel-button right" onClick={handleNextCase}>
+            <ChevronRight size={40} />
+          </button>
         </div>
       </section>
 
