@@ -21,13 +21,20 @@ export default function App() {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [activeButton, setActiveButton] = useState(null);
+  const [hasAdvanced, setHasAdvanced] = useState(false);
 
   function handlePrev() {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? logos.length - 8 : prevIndex - 1));
+    if (hasAdvanced) {
+      setCurrentIndex((prevIndex) => (prevIndex === 0 ? logos.length - 8 : prevIndex - 1));
+    }
   };
 
   function handleNext() {
-    setCurrentIndex((prevIndex) => (prevIndex === logos.length - 8 ? 0 : prevIndex + 1));
+    setCurrentIndex((prevIndex) => {
+      const newIndex = (prevIndex === logos.length - 8 ? 0 : prevIndex + 1);
+      setHasAdvanced(true);
+      return newIndex;
+    });
   };
 
   function handleButtonClick(button) {
@@ -143,8 +150,8 @@ export default function App() {
         </div>
       </section>
 
-      <section className="fortune-section">
-        <div className="fortune-container">
+      <section className="companies-section">
+        <div className="companies-container">
           <h2>Trusted by top Fortune 500 clients from around the world</h2>
           <div className="carousel">
             <button className="carousel-button left" onClick={handlePrev}><ChevronLeft size={40} /></button>
