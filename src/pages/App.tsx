@@ -30,35 +30,35 @@ export default function App() {
   // Data for Solutions section
   const solutionsData = [
     {
-      imageSrc: '/assets/images/metaverse-image.jpg',
+      imageSrc: '/assets/images/solutions/metaverse-image.jpg',
       title: 'Metaverse Content Production',
-      logoSrc: '/assets/images/metaverse-logo.png'
+      logoSrc: '/assets/images/solutions/metaverse-logo.png'
     },
     {
-      imageSrc: '/assets/images/enhanced-image.jpg',
+      imageSrc: '/assets/images/solutions/enhanced-image.jpg',
       title: 'Enhanced Brand Content',
-      logoSrc: '/assets/images/enhanced-logo.png'
+      logoSrc: '/assets/images/solutions/enhanced-logo.png'
     },
     {
-      imageSrc: '/assets/images/catalog-image.jpg',
+      imageSrc: '/assets/images/solutions/catalog-image.jpg',
       title: 'Catalog Management',
-      logoSrc: '/assets/images/catalog-logo.png'
+      logoSrc: '/assets/images/solutions/catalog-logo.png'
     },
     {
-      imageSrc: '/assets/images/product-image.jpg',
+      imageSrc: '/assets/images/solutions/product-image.jpg',
       title: 'Product Imagery',
-      logoSrc: '/assets/images/product-logo.png'
+      logoSrc: '/assets/images/solutions/product-logo.png'
     },
     {
-      imageSrc: '/assets/images/ar-image.jpg',
+      imageSrc: '/assets/images/solutions/ar-image.jpg',
       title: 'AR Viewer',
-      logoSrc: '/assets/images/ar-logo.png',
+      logoSrc: '/assets/images/solutions/ar-logo.png',
       isSpecial: true
     },
     {
-      imageSrc: '/assets/images/omnichannel-image.jpg',
+      imageSrc: '/assets/images/solutions/omnichannel-image.jpg',
       title: 'Omnichannel Commerce',
-      logoSrc: '/assets/images/omnichannel-logo.png'
+      logoSrc: '/assets/images/solutions/omnichannel-logo.png'
     }
   ];
 
@@ -134,16 +134,16 @@ export default function App() {
 
   // Company logos
   const logos = [
-    '/assets/images/garmin-image.png',
-    '/assets/images/stanley-image.png',
-    '/assets/images/siemens-image.png',
-    '/assets/images/wells-image.png',
-    '/assets/images/delphi-image.png',
-    '/assets/images/under-image.png',
-    '/assets/images/americanEagle-image.png',
-    '/assets/images/bosch-image.png',
-    '/assets/images/lowe-image.png',
-    '/assets/images/reckitt-image.png'
+    '/assets/images/companies/garmin-image.png',
+    '/assets/images/companies/stanley-image.png',
+    '/assets/images/companies/siemens-image.png',
+    '/assets/images/companies/wells-image.png',
+    '/assets/images/companies/delphi-image.png',
+    '/assets/images/companies/under-image.png',
+    '/assets/images/companies/americanEagle-image.png',
+    '/assets/images/companies/bosch-image.png',
+    '/assets/images/companies/lowe-image.png',
+    '/assets/images/companies/reckitt-image.png'
   ];
 
   // button for info
@@ -213,11 +213,11 @@ export default function App() {
         <h2>Tulfa AR creates immersive and engaging eCommerce experiences</h2>
 
         <div>
-          <img src= "/assets/images/nike-image.png" alt="nike" />
-          <img src= "/assets/images/barn-image.png" alt="barn" />
-          <img src= "/assets/images/MLB-image.png" alt="MLB" />
-          <img src= "/assets/images/boomChicka-image.png" alt="BoomChicka" />
-          <img src= "/assets/images/MHD-image.png" alt="MHD" />
+          <img src= "/assets/images/immersive/nike-image.png" alt="nike" />
+          <img src= "/assets/images/immersive/barn-image.png" alt="barn" />
+          <img src= "/assets/images/immersive/MLB-image.png" alt="MLB" />
+          <img src= "/assets/images/immersive/boomChicka-image.png" alt="BoomChicka" />
+          <img src= "/assets/images/immersive/MHD-image.png" alt="MHD" />
         </div>
       </section>
 
