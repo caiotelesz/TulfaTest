@@ -209,7 +209,7 @@ export default function App() {
         <h2>The way businesses and consumers shop has radically changed. Discover how top brands across multiple industries deliver an excellent digital-first customer experience with Tulfa.</h2>
       </section>
 
-      <section className='section2'>
+      <section className='immersive-section'>
         <h2>Tulfa AR creates immersive and engaging eCommerce experiences</h2>
 
         <div>
