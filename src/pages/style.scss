@@ -200,14 +200,106 @@
 
     .who-we-work-with {
       background-color: #736DF9;
-      color: #fff;
       border: none;
-      cursor: pointer;
-      padding: 10px 20px;
-      font-size: 16px;
       border-radius: 5px;
       margin-top: 60px;
+      padding: 10px 20px;
+      
       font-family: "SfPro-Regular";
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 16px;
+
+      cursor: pointer;
+    }
+  }
+}
+
+.info-section {
+  background-color: #151568;
+  
+  .info-container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1100px;
+    padding: 100px 0px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .info-top {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+
+      .info-title {
+        color: #FFFFFF;
+        text-align: center;
+
+        h2 {
+          font-family: "SfPro-SemiBold";
+          font-size: 40px;
+          line-height: 44px;
+          letter-spacing: 0.03em;
+          margin-bottom: 15px;
+        }
+
+        p {
+          font-family: "SfPro-Light";
+          font-size: 16px;
+          line-height: 23px;
+          letter-spacing: 0.035em;
+        }
+      }
+
+      .info-anchor {
+        display: flex;
+        gap: 15px;
+
+        a {
+          padding: 10px 20px;
+          border-radius: 20px;
+          background-color: #30288F;
+          color: #FFFFFF;
+          font-family: "SfPro-Light";
+          font-size: 12px;
+          line-height: 13.8px;
+          letter-spacing: 0.05em;
+          cursor: pointer;
+
+          &.active {
+            background-color: #736DF9;
+          }
+        }
+      }
+    }
+
+    .info-card {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .info-btn {
+      display: flex;
+      justify-content: center;
+      .load-more {
+        background-color: #736DF9;
+        border: none;
+        border-radius: 5px;
+        margin-top: 60px;
+        padding: 10px 40px;
+        
+        font-family: "SfPro-Regular";
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 14px;
+  
+        cursor: pointer;
+      }
     }
   }
 }

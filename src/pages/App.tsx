@@ -3,6 +3,7 @@ import { Solutions }  from '../components/solutions';
 import { MediaDisplay } from '../components/mediaDisplay';
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { InfoCard } from '../components/infoCard';
 
 function App() {
   const logos = [
@@ -19,13 +20,18 @@ function App() {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [activeButton, setActiveButton] = useState(null);
 
-  const handlePrev = () => {
+  function handlePrev() {
     setCurrentIndex((prevIndex) => (prevIndex === 0 ? logos.length - 8 : prevIndex - 1));
   };
 
-  const handleNext = () => {
+  function handleNext() {
     setCurrentIndex((prevIndex) => (prevIndex === logos.length - 8 ? 0 : prevIndex + 1));
+  };
+
+  function handleButtonClick(button) {
+    setActiveButton(button);
   };
 
   return (
@@ -150,7 +156,66 @@ function App() {
             <button className="carousel-button right" onClick={handleNext}><ChevronRight size={40} /></button>
           </div>
           
-          <button className="who-we-work-with">WHO WE WORK WITH</button>
+          <button className="who-we-work-with">Who We Work With</button>
+        </div>
+      </section>
+
+      <section className='info-section'>
+        <div className='info-container'>
+          <div className='info-top'>
+            <div className='info-title'>
+                <h2>Digital Transformation for All</h2>
+                <p>Find optimum and convenient ways to adapt to the trend-setting digital revolutions.</p>
+            </div>
+            <div className='info-anchor'>
+            {['3D Modeling', 'Augmented Reality', 'Product Imagery', 'Rich Media', 'Product Content'].map((label) => (
+              <a
+                key={label}
+                onClick={() => handleButtonClick(label)}
+                className={activeButton === label ? 'active' : ''}
+              >
+                {label}
+              </a>
+            ))}
+          </div>
+          </div>
+
+          <div className="info-card">
+            <InfoCard 
+              title='Baby Crib - 3D Modeling / Augmented Reality'
+              description='The potential of augmented reality is limitless. With augmented reality, give your shoppers the opportunity to feel and experience your products in their space.'
+              image='/assets/images/info/baby-image.png'
+            />
+            <InfoCard 
+              title='Kate Spade New York & Tulfa Inc | AR/VR | InStore Immersive Activation'
+              description='This Summer, Tulfa and Kate Spade New York worked together to create an immersive, engaging experience for their Rockefeller Centre store in New York.'
+              image='/assets/images/info/kate-image.png'
+            />
+            <InfoCard 
+              title='HARLEY DAVIDSON HELMET - Timelapse Showreel by Tulfa Inc.'
+              description='Our skilled 3D artists need only a few reference images to create high-quality product renders.'
+              image='/assets/images/info/harley-image.png'
+            />
+            <InfoCard 
+              title='NIKE - AR Ready 3D Model by Tulfa Inc'
+              description='Augmented reality provides sellers the ability to set their products apart from the competition by offering consumers new shopping experiences.'
+              image='/assets/images/info/nike-image.png'
+            />
+            <InfoCard 
+              title='Hardware Category - CRL Products - 3D Modeling'
+              description='Every day, from 6 continents across 20 industry verticals, our staff delivers next generation customer experience and helps companies better connect with their customers.'
+              image='/assets/images/info/baby-image.png'
+            />
+            <InfoCard 
+              title='Chicago Cubs Nike T-Shirt - Product Animation Showreel by Tulfa Inc.'
+              description='Our team of 3D artists created this CGI product video to show off not one, not two, but three different shirts representing our hometown baseball team, the Chicago Cubs!'
+              image='/assets/images/info/baby-image.png'
+            />
+          </div>
+
+          <div className="info-btn">
+            <button className="load-more">Load More</button>
+          </div>
         </div>
       </section>
     </div>

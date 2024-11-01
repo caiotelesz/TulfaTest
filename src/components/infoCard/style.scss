@@ -1,0 +1,29 @@
+.info-card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #FFFFFF;
+
+  img {
+    width: 365px;
+    height: 250px;
+    border-radius: 15px;
+  }
+
+  h3 {
+    font-family: "SfPro-SemiBold";
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 0.03em;
+    width: 365px;
+  }
+
+  p {
+    font-family: "SfPro-Light";
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 23px;
+    letter-spacing: 0.035em;
+    width: 365px;
+  }
+}
