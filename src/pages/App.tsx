@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { InfoCard } from '../components/infoCard';
 import { CaseCard } from '../components/caseCard';
+import { Header } from '../components/header';
 
 export default function App() {
 
@@ -198,6 +199,7 @@ export default function App() {
   return (
     <div>
       <section className='banner-section'>
+        <Header />
         <video autoPlay muted src="/assets/videos/video-page.mp4" />  
 
         <div className='banner-container'>
