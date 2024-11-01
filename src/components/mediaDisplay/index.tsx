@@ -2,7 +2,7 @@ import { useRef, useState } from 'react';
 import { Pause, Play } from 'lucide-react';
 import './style.scss';
 
-interface MediaDisplayProps {
+export interface MediaDisplayProps {
   title: string;
   subtitle: string;
   description: string;

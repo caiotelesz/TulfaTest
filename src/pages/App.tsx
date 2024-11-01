@@ -1,6 +1,6 @@
 import './style.scss';
 import { Solutions }  from '../components/solutions';
-import { MediaDisplay } from '../components/mediaDisplay';
+import { MediaDisplay, MediaDisplayProps } from '../components/mediaDisplay';
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { InfoCard } from '../components/infoCard';
@@ -10,7 +10,7 @@ import { Header } from '../components/header';
 export default function App() {
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [activeButton, setActiveButton] = useState(null);
+  const [activeButton, setActiveButton] = useState<string | null>(null);
   const [hasAdvanced, setHasAdvanced] = useState(false);
 
   // Carousel for Companies
@@ -64,7 +64,7 @@ export default function App() {
   ];
 
   // Data for MediaDisplay section
-  const mediaData = [
+  const mediaData: MediaDisplayProps[] = [
     {
       title: 'Metaverse Content Production',
       subtitle: 'InStore Immersive Activation',
@@ -148,7 +148,7 @@ export default function App() {
   ];
 
   // button for info
-  function handleButtonClick(button) {
+  function handleButtonClick(button: string) {
     setActiveButton(button);
   };
 
