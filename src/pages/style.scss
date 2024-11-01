@@ -420,6 +420,38 @@
   .info-section {
     .info-container {
       width: 90%;
-    }
+
+      .info-top {
+
+        .info-title {
+          text-align: center;
+        }
+  
+        .info-anchor {
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 7px;
+  
+          a {
+            font-size: 9px;
+          }
+        }
+      }
+
+      .info-card {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        justify-items: center;
+      }
+  
+      .info-btn {
+        justify-content: center;
+        .load-more {
+          margin-top: 30px;
+          padding: 10px 30px;
+        }
+      }
+    } 
   }
 }
